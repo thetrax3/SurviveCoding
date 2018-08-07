@@ -1,5 +1,7 @@
 package com.example.it.survivecoding;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -49,6 +51,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         "Thank you!";
 
         displayMsg(tMsg);
+
+        /* 전화걸기
+        Uri uri =Uri.parse("tel:01034243814");
+        Intent intent = new Intent(Intent.ACTION_DIAL, uri);
+        startActivity(intent);*/
+        String[] addresses = new String[]{"thetrax5@naver.com"};
+        composeEmail(addresses, "title:mail test", null, tMsg);
+    }
+
+    public void composeEmail(String[] addresses, String subject, Uri attachment, String text) {
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("text/plain");
+        intent.putExtra(Intent.EXTRA_EMAIL, addresses);
+        intent.putExtra(Intent.EXTRA_SUBJECT, subject);
+        intent.putExtra(Intent.EXTRA_STREAM, attachment);
+        intent.putExtra(Intent.EXTRA_TEXT, text);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
     }
     private void display(int number){
         quantityTextView.setText("" + number);//
