@@ -25,7 +25,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void subitOrder(View view){
         Log.d(TAG, "Btn");
         display(mQuantity);
-        displayPrice(mQuantity * price);
+        //displayPrice(mQuantity * price);
+        String sPrice = NumberFormat.getCurrencyInstance().format(mQuantity * price);
+        String priceMsg = "Total:" + sPrice + "\nThank you!";
+        displayMsg(priceMsg);
     }
     private void display(int number){
         TextView quantityTextView =
@@ -61,5 +64,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void Increase() {
         mQuantity++;
+    }
+
+    private void displayMsg(String msg) {
+        TextView priceTextView
+                = findViewById(R.id.price_text_view);
+        priceTextView.setText(msg);
     }
 }
