@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">SurviveCoding</string>
+    <string name="quantity">QUANTITY</string>
+    <string name="price">PRICE</string>
+    <string name="order">ORDER</string>
+    <string name="decrease">-</string>
+    <string name="zero">0</string>
+    <string name="increase">+</string>
+    <string name="_0">$0</string>
+    <string name="total">Total:</string>
+    <string name="thank_you">Thank you!</string>
+    <string name="whipped_cream">Whipped cream</string>
+    <string name="toppings">TOPPINGS</string>
+    <string name="order_summary">ORDER SUMMARY</string>
 </resources>

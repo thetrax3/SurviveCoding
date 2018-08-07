@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SurviveCoding</string>
+    <string name="order">주문</string>
+    <string name="price">가격</string>
+    <string name="quantity">수량</string>
+    <string name="decrease">-</string>
+    <string name="zero">0</string>
+    <string name="increase">+</string>
+    <string name="_0">$0</string>
+    <string name="total">총 가격:</string>
+    <string name="thank_you">감사합니다!</string>
+</resources>
