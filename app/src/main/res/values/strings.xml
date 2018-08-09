@@ -12,4 +12,5 @@
     <string name="whipped_cream">Whipped cream</string>
     <string name="toppings">TOPPINGS</string>
     <string name="order_summary">ORDER SUMMARY</string>
+    <string name="login">LOGIN</string>
 </resources>
