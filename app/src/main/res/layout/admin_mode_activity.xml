@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="10dp">
+
+
+    <TextView
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="관리자 모드 * 계좌 전체 조회" />
+
+    <ListView
+        android:id="@+id/admin_accountInfo"
+        android:layout_width="match_parent"
+        android:layout_height="470dp"></ListView>
+
+    <Button
+        android:id="@+id/admin_endBtn"
+        android:text="닫기"
+        android:onClick="onClick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

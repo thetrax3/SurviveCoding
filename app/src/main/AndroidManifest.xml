@@ -44,15 +44,11 @@
         <activity android:name=".WeatherApp.WeatherActivity" />
         <activity android:name=".MemoApp.MemoActivity" />
         <activity android:name=".MemoApp.EditMemoActivity" />
-        <activity
-            android:name=".Main2Activity"
-            android:label="@string/title_activity_main2" />
-        <activity
-            android:name=".MemoApp.Main3Activity"
-            android:label="@string/title_activity_main3" />
-        <activity
-            android:name=".MemoApp.Memo2Activity"
-            android:label="@string/title_activity_memo2"></activity>
+        <activity android:name=".managers.BankActivity" />
+        <activity android:name=".managers.BankRegisterActivity" />
+        <activity android:name=".managers.BankLoginActivity"></activity>
+        <activity android:name=".managers.AdminModeActivity" />
+
     </application>
 
 </manifest>

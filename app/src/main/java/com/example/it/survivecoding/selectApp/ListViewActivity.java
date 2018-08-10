@@ -16,6 +16,7 @@ import com.example.it.survivecoding.MemoApp.MemoActivity;
 import com.example.it.survivecoding.R;
 import com.example.it.survivecoding.WeatherApp.WeatherActivity;
 import com.example.it.survivecoding.coffeeApp.MainActivity;
+import com.example.it.survivecoding.managers.BankActivity;
 
 import java.util.ArrayList;
 
@@ -43,6 +44,7 @@ public class ListViewActivity extends AppCompatActivity implements AdapterView.O
         // 2 번째 아이템 추가.
         addItem("날씨앱", "모델클래스를 활용하여 BaseAdapter 연습", WeatherActivity.class);
         addItem("메모장", "연습", MemoActivity.class);
+        addItem("은행앱", "연습", BankActivity.class);
 
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
