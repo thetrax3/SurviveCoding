@@ -13,4 +13,7 @@
     <string name="toppings">TOPPINGS</string>
     <string name="order_summary">ORDER SUMMARY</string>
     <string name="login">LOGIN</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_main3">Main3Activity</string>
+    <string name="title_activity_memo2">Memo2Activity</string>
 </resources>

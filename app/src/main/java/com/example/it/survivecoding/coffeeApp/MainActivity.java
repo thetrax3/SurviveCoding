@@ -1,4 +1,4 @@
-package com.example.it.survivecoding;
+package com.example.it.survivecoding.coffeeApp;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -11,6 +11,8 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.it.survivecoding.R;
 
 import java.text.NumberFormat;
 

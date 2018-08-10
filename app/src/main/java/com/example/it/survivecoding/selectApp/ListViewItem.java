@@ -1,4 +1,4 @@
-package com.example.it.survivecoding;
+package com.example.it.survivecoding.selectApp;
 
 public class ListViewItem {
     private String title;

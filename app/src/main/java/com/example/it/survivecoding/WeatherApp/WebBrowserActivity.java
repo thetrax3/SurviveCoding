@@ -1,4 +1,4 @@
-package com.example.it.survivecoding;
+package com.example.it.survivecoding.WeatherApp;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +12,8 @@ import android.webkit.WebViewClient;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.it.survivecoding.R;
 
 public class WebBrowserActivity extends AppCompatActivity {
 

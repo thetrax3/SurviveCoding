@@ -1,4 +1,4 @@
-package com.example.it.survivecoding;
+package com.example.it.survivecoding.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,10 +7,13 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import com.example.it.survivecoding.R;
+import com.example.it.survivecoding.selectApp.ListViewItem;
+
 import java.util.ArrayList;
 
 public class ListViewAdapter extends BaseAdapter {
-    public static ArrayList<ListViewItem> listViewItems = new ArrayList<ListViewItem>();
+    private static ArrayList<ListViewItem> listViewItems = new ArrayList<ListViewItem>();
 
     @Override
     public int getCount() {

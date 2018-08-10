@@ -1,10 +1,9 @@
-package com.example.it.survivecoding;
+package com.example.it.survivecoding.selectApp;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,9 +12,14 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.it.survivecoding.MemoApp.MemoActivity;
+import com.example.it.survivecoding.R;
+import com.example.it.survivecoding.WeatherApp.WeatherActivity;
+import com.example.it.survivecoding.coffeeApp.MainActivity;
+
 import java.util.ArrayList;
 
-public class ListViewActivity extends AppCompatActivity {
+public class ListViewActivity extends AppCompatActivity implements AdapterView.OnItemLongClickListener {
     private ArrayList<ListViewItem> listViewItems = new ArrayList<ListViewItem>();
     private ListView mListView;
     private ListViewAdapter adapter;
@@ -38,6 +42,7 @@ public class ListViewActivity extends AppCompatActivity {
         addItem("커피앱", "커피 주문하는 앱", MainActivity.class);
         // 2 번째 아이템 추가.
         addItem("날씨앱", "모델클래스를 활용하여 BaseAdapter 연습", WeatherActivity.class);
+        addItem("메모장", "연습", MemoActivity.class);
 
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -46,10 +51,10 @@ public class ListViewActivity extends AppCompatActivity {
 
                 String title = item.getTitle();
                 String context = item.getContext();
-                Log.d("setOnItem", "!23");
                 startActivity(intentArraylist.get(position));
             }
         });
+        mListView.setOnItemLongClickListener(this);
     }
 
     public void addItem(String title, String context, Class className) {
@@ -58,13 +63,17 @@ public class ListViewActivity extends AppCompatActivity {
         item.setTitle(title);
         item.setContext(context);
 
-        Log.d("addItem", "!23");
         Intent intent = new Intent(this, className);
         listViewItems.add(item);
         intentArraylist.add(intent);
 
     }
 
+    @Override
+    public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
+        listViewItems.remove(i);
+        return true;
+    }
 
     public class ListViewAdapter extends BaseAdapter {
         @Override
