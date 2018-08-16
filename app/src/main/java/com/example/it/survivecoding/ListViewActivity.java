@@ -48,6 +48,7 @@ public class ListViewActivity extends AppCompatActivity implements AdapterView.O
         addItem("은행앱", "연습", BankActivity.class);
         addItem("LifeCycle", "생명주기", LifeCycleActivity.class);
         addItem("Fragment", "ColorFragment", ColorFragmentActivity.class);
+        addItem("리스트뷰 연습", "리스트뷰 연습", ListViewExamActivity.class);
 
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
