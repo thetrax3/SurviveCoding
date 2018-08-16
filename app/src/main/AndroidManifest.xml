@@ -48,8 +48,8 @@
         <activity android:name=".managers.BankRegisterActivity" />
         <activity android:name=".managers.BankLoginActivity" />
         <activity android:name=".managers.AdminModeActivity" />
-        <activity
-            android:name=".lifecycle.LifeCycleActivity"></activity>
+        <activity android:name=".lifecycle.LifeCycleActivity" />
+        <activity android:name=".ColorFragmentActivity"></activity>
     </application>
 
 </manifest>
