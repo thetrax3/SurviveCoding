@@ -26,6 +26,14 @@ public class LifeCycleActivity extends AppCompatActivity {
 
         Log.d(Tag, "OnCreate: ");
 
+        //score복원을 여기에 넣어도 됨됨
+    }
+
+    //복원
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
         //score복원
         if (savedInstanceState != null) {
             mScore = savedInstanceState.getInt("score");
