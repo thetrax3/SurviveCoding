@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".lifecycle.LifeCycleActivity"
+    android:orientation="vertical">
+
+    <Button
+        android:background="#ff0000"
+        android:id="@+id/add_point"
+        android:text="점수 올리기"
+        android:onClick="onClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/score_textView"
+        android:textSize="36sp"
+        android:text="점수 : 100"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <EditText
+        android:id="@+id/state_edit"
+        android:hint="상태 저장 테스트용용"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

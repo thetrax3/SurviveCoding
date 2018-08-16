@@ -1,6 +1,8 @@
 package com.example.it.survivecoding.lifecycle;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -26,8 +28,18 @@ public class LifeCycleActivity extends AppCompatActivity {
 
         Log.d(Tag, "OnCreate: ");
 
-        //score복원을 여기에 넣어도 됨됨
+        //score복원을 여기에 넣어도 됨
+        /*if (savedInstanceState != null) {
+            mScore = savedInstanceState.getInt("score");
+            setScore(mScore);
+        }*/
+
+        //읽어오기
+        SharedPreferences sharedPreferences =
+                PreferenceManager.getDefaultSharedPreferences(this);
+        mScore = sharedPreferences.getInt("score", 0);
     }
+
 
     //복원
     @Override
@@ -61,6 +73,15 @@ public class LifeCycleActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         Log.d(Tag, "onPause:");
+
+        //저장
+        SharedPreferences sharedPreferences =
+                PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("score", mScore);
+        //editor.commit(); //동기(sync)
+        editor.apply(); //비동기(async)
+
     }
 
     @Override

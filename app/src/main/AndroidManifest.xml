@@ -49,8 +49,7 @@
         <activity android:name=".managers.BankLoginActivity" />
         <activity android:name=".managers.AdminModeActivity" />
         <activity
-            android:name=".lifecycle.LifeCycleActivity"
-            android:screenOrientation="portrait"></activity>
+            android:name=".lifecycle.LifeCycleActivity"></activity>
     </application>
 
 </manifest>
