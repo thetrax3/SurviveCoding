@@ -1,4 +1,4 @@
-package com.example.it.survivecoding.selectApp;
+package com.example.it.survivecoding;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,10 +13,11 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.it.survivecoding.MemoApp.MemoActivity;
-import com.example.it.survivecoding.R;
 import com.example.it.survivecoding.WeatherApp.WeatherActivity;
 import com.example.it.survivecoding.coffeeApp.MainActivity;
+import com.example.it.survivecoding.lifecycle.LifeCycleActivity;
 import com.example.it.survivecoding.managers.BankActivity;
+import com.example.it.survivecoding.selectApp.ListViewItem;
 
 import java.util.ArrayList;
 
@@ -45,6 +46,7 @@ public class ListViewActivity extends AppCompatActivity implements AdapterView.O
         addItem("날씨앱", "모델클래스를 활용하여 BaseAdapter 연습", WeatherActivity.class);
         addItem("메모장", "연습", MemoActivity.class);
         addItem("은행앱", "연습", BankActivity.class);
+        addItem("LifeCycle", "생명주기", LifeCycleActivity.class);
 
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
