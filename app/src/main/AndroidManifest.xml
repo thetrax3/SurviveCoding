@@ -52,7 +52,8 @@
         <activity android:name=".ColorFragmentActivity" />
         <activity android:name=".ListViewExamActivity" />
         <activity android:name=".FragmentExam1Activity" />
-        <activity android:name=".admob.admobActivity"></activity>
+        <activity android:name=".admob.AdMobActivity" />
+        <activity android:name=".ImageFragmentActivity"></activity>
     </application>
 
 </manifest>

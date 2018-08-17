@@ -7,7 +7,7 @@ import com.example.it.survivecoding.R;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
-public class admobActivity extends AppCompatActivity {
+public class AdMobActivity extends AppCompatActivity {
 
     private AdView mAdView;
 

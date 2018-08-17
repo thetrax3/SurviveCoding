@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "861477619685",
+    "firebase_url": "https://survivecoding.firebaseio.com",
+    "project_id": "survivecoding",
+    "storage_bucket": "survivecoding.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:861477619685:android:372e8003227272df",
+        "android_client_info": {
+          "package_name": "com.example.it.survivecoding"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "861477619685-llpsfr3hn8c6behfe97o7mj2s5mecj3n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.it.survivecoding",
+            "certificate_hash": "7e8f101823cda8d8be6ac21f01f1ce97e5d33065"
+          }
+        },
+        {
+          "client_id": "861477619685-astl7613vbr4oes6dvqqq2brmolddpec.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxZ17FHw3AHgYiDQZ_NYHgBEMTySVvj3M"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "861477619685-astl7613vbr4oes6dvqqq2brmolddpec.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
