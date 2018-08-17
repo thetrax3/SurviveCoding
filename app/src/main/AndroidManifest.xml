@@ -50,7 +50,8 @@
         <activity android:name=".managers.AdminModeActivity" />
         <activity android:name=".lifecycle.LifeCycleActivity" />
         <activity android:name=".ColorFragmentActivity" />
-        <activity android:name=".ListViewExamActivity"></activity>
+        <activity android:name=".ListViewExamActivity" />
+        <activity android:name=".FragmentExam1Activity"></activity>
     </application>
 
 </manifest>
