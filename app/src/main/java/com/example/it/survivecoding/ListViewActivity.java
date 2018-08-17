@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.example.it.survivecoding.MemoApp.MemoActivity;
 import com.example.it.survivecoding.WeatherApp.WeatherActivity;
+import com.example.it.survivecoding.admob.admobActivity;
 import com.example.it.survivecoding.coffeeApp.MainActivity;
 import com.example.it.survivecoding.lifecycle.LifeCycleActivity;
 import com.example.it.survivecoding.managers.BankActivity;
@@ -50,6 +51,7 @@ public class ListViewActivity extends AppCompatActivity implements AdapterView.O
         addItem("Fragment", "ColorFragment", ColorFragmentActivity.class);
         addItem("리스트뷰 연습", "리스트뷰 연습", ListViewExamActivity.class);
         addItem("프래그먼트 연습", "프래그먼트 연습", FragmentExam1Activity.class);
+        addItem("애드몹 연습", "애드몹 연습", admobActivity.class);
 
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

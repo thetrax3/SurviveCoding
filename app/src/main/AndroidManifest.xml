@@ -51,7 +51,8 @@
         <activity android:name=".lifecycle.LifeCycleActivity" />
         <activity android:name=".ColorFragmentActivity" />
         <activity android:name=".ListViewExamActivity" />
-        <activity android:name=".FragmentExam1Activity"></activity>
+        <activity android:name=".FragmentExam1Activity" />
+        <activity android:name=".admob.admobActivity"></activity>
     </application>
 
 </manifest>
