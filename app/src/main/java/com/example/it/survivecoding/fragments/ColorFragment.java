@@ -16,14 +16,26 @@ public class ColorFragment extends Fragment {
 
     //필수
     public ColorFragment() {
+    }
 
+    public static ColorFragment newInstance(int color) {
+        ColorFragment colorFragment = new ColorFragment();
+        Bundle bundle = new Bundle();
+        bundle.putInt("color", color);
+        colorFragment.setArguments(bundle);
+        return colorFragment;
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_color, container, false);
+
+        Bundle bundle = getArguments();
+        int color = bundle.getInt("color");
+        mColor = color;
         view.setBackgroundColor(mColor);
+
         return view;
     }
 

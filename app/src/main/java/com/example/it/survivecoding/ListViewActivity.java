@@ -53,6 +53,7 @@ public class ListViewActivity extends AppCompatActivity implements AdapterView.O
         addItem("프래그먼트 연습", "프래그먼트 연습", FragmentExam1Activity.class);
         addItem("애드몹 연습", "애드몹 연습", AdMobActivity.class);
         addItem("프래그먼트 콜백 연습", "프래그먼트 콜백 연습", ImageFragmentActivity.class);
+        addItem("ViewPager", "ViewPager", ViewPagerActivity.class);
 
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

@@ -19,28 +19,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".coffeeApp.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".IntentTest.IntentExamActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".coffeeApp.MainActivity"></activity>
+        <activity android:name=".IntentTest.IntentExamActivity"></activity>
         <activity android:name=".IntentTest.IntentExam2Activity" />
-        <activity android:name=".WeatherApp.WebBrowserActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".WeatherApp.WebBrowserActivity"></activity>
         <activity android:name=".WeatherApp.WeatherActivity" />
         <activity android:name=".MemoApp.MemoActivity" />
         <activity android:name=".MemoApp.EditMemoActivity" />
@@ -53,7 +35,8 @@
         <activity android:name=".ListViewExamActivity" />
         <activity android:name=".FragmentExam1Activity" />
         <activity android:name=".admob.AdMobActivity" />
-        <activity android:name=".ImageFragmentActivity"></activity>
+        <activity android:name=".ImageFragmentActivity" />
+        <activity android:name=".ViewPagerActivity"></activity>
     </application>
 
 </manifest>
