@@ -1,10 +1,11 @@
-package com.example.it.survivecoding;
+package com.example.it.survivecoding.Activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.it.survivecoding.R;
 import com.example.it.survivecoding.fragments.ImageFragment;
 
 public class ImageFragmentActivity extends AppCompatActivity implements ImageFragment.OnImageTouchListener {

@@ -19,10 +19,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".coffeeApp.MainActivity"></activity>
-        <activity android:name=".IntentTest.IntentExamActivity"></activity>
+        <activity android:name=".coffeeApp.MainActivity" />
+        <activity android:name=".IntentTest.IntentExamActivity" />
         <activity android:name=".IntentTest.IntentExam2Activity" />
-        <activity android:name=".WeatherApp.WebBrowserActivity"></activity>
+        <activity android:name=".WeatherApp.WebBrowserActivity" />
         <activity android:name=".WeatherApp.WeatherActivity" />
         <activity android:name=".MemoApp.MemoActivity" />
         <activity android:name=".MemoApp.EditMemoActivity" />
@@ -31,12 +31,13 @@
         <activity android:name=".managers.BankLoginActivity" />
         <activity android:name=".managers.AdminModeActivity" />
         <activity android:name=".lifecycle.LifeCycleActivity" />
-        <activity android:name=".ColorFragmentActivity" />
-        <activity android:name=".ListViewExamActivity" />
-        <activity android:name=".FragmentExam1Activity" />
+        <activity android:name=".Activity.ColorFragmentActivity" />
+        <activity android:name=".Activity.ListViewExamActivity" />
+        <activity android:name=".Activity.FragmentExam1Activity" />
         <activity android:name=".admob.AdMobActivity" />
-        <activity android:name=".ImageFragmentActivity" />
-        <activity android:name=".ViewPagerActivity"></activity>
+        <activity android:name=".Activity.ImageFragmentActivity" />
+        <activity android:name=".Activity.ViewPagerActivity" />
+        <activity android:name=".ViewPagerExamActivity"></activity>
     </application>
 
 </manifest>

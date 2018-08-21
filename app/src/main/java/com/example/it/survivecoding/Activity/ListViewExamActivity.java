@@ -1,4 +1,4 @@
-package com.example.it.survivecoding;
+package com.example.it.survivecoding.Activity;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.example.it.survivecoding.R;
 
 import java.util.ArrayList;
 import java.util.Collections;

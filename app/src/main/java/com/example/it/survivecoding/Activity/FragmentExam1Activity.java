@@ -1,10 +1,11 @@
-package com.example.it.survivecoding;
+package com.example.it.survivecoding.Activity;
 
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.example.it.survivecoding.R;
 import com.example.it.survivecoding.fragments.TextFragment;
 
 public class FragmentExam1Activity extends AppCompatActivity {

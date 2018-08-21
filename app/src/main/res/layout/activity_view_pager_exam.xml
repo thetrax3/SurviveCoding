@@ -4,23 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.ViewPagerActivity"
+    tools:context=".ViewPagerExamActivity"
     android:orientation="vertical">
 
     <android.support.design.widget.TabLayout
         android:id="@+id/tab"
+        app:tabBackground="@color/colorPrimary"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:tabBackground="@drawable/tab_background"
-        app:tabIndicatorColor="#ffffff"
-        app:tabMode="fixed"
-        app:tabSelectedTextColor="#000000"
-        app:tabTextColor="#ffffff"></android.support.design.widget.TabLayout>
+        android:layout_height="wrap_content"></android.support.design.widget.TabLayout>
 
     <android.support.v4.view.ViewPager
         android:id="@+id/pager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        ></android.support.v4.view.ViewPager>
+        android:layout_height="match_parent"></android.support.v4.view.ViewPager>
 
 </LinearLayout>

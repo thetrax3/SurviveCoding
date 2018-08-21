@@ -1,4 +1,4 @@
-package com.example.it.survivecoding;
+package com.example.it.survivecoding.Activity;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -10,6 +10,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 
+import com.example.it.survivecoding.R;
 import com.example.it.survivecoding.fragments.ColorFragment;
 
 public class ViewPagerActivity extends AppCompatActivity {
