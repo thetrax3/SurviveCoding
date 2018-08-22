@@ -93,6 +93,7 @@ public class WriteBoardActivity extends AppCompatActivity implements View.OnClic
             };
 
 /*
+            //유저 아이디(Writer 정보를 불러와서 같이 값을 넘겨 주어야함)
             RegisterRequest registerRequest = new RegisterRequest(userID, userPwd, userName, userEmail, responseListener);
             RequestQueue queue = Volley.newRequestQueue(RegisterActivity.this);
             queue.add(registerRequest);//registerRequest에서 받은 정보를 추가하는 부분
