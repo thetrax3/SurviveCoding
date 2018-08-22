@@ -23,7 +23,9 @@ import com.example.it.survivecoding.admob.AdMobActivity;
 import com.example.it.survivecoding.coffeeApp.MainActivity;
 import com.example.it.survivecoding.lifecycle.LifeCycleActivity;
 import com.example.it.survivecoding.managers.BankActivity;
+import com.example.it.survivecoding.project.MainBoardActivity;
 import com.example.it.survivecoding.selectApp.ListViewItem;
+import com.example.it.survivecoding.viewPager.ViewPagerExamActivity;
 
 import java.util.ArrayList;
 
@@ -31,7 +33,6 @@ public class ListViewActivity extends AppCompatActivity implements AdapterView.O
     private ArrayList<ListViewItem> listViewItems = new ArrayList<ListViewItem>();
     private ListView mListView;
     private ListViewAdapter adapter;
-    private static int i = 0;
     private ArrayList<Intent> intentArraylist = new ArrayList<Intent>();
 
     @Override
@@ -60,6 +61,7 @@ public class ListViewActivity extends AppCompatActivity implements AdapterView.O
         addItem("프래그먼트 콜백 연습", "프래그먼트 콜백 연습", ImageFragmentActivity.class);
         addItem("ViewPager", "ViewPager", ViewPagerActivity.class);
         addItem("ViewPager 연습", "TabLayout +ViewPage", ViewPagerExamActivity.class);
+        addItem("개인 Project", "", MainBoardActivity.class);
 
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
