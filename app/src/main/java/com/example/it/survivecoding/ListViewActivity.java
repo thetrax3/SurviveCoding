@@ -13,6 +13,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.it.survivecoding.API.GeoIpActivity;
+import com.example.it.survivecoding.API.MapsActivity;
 import com.example.it.survivecoding.API.WeatherApiActivity;
 import com.example.it.survivecoding.Activity.ColorFragmentActivity;
 import com.example.it.survivecoding.Activity.FragmentExam1Activity;
@@ -68,6 +69,7 @@ public class ListViewActivity extends AppCompatActivity implements AdapterView.O
         addItem("개인 Project", "", ReadBoardActivity.class);
         addItem("FreeGeoIp", "API 사용 연습", GeoIpActivity.class);
         addItem("날씨앱 API버전", "API 사용 연습", WeatherApiActivity.class);
+        addItem("GoogleMap 데모", "GoogleMap 데모", MapsActivity.class);
 
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
