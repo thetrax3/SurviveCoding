@@ -81,7 +81,7 @@ public class MainBoardActivity extends AppCompatActivity {
             if (view == null) {
                 viewHolder = new ViewHolder();
                 view = LayoutInflater.from(viewGroup.getContext())
-                        .inflate(R.layout.project_borad__read_item, viewGroup, false);
+                        .inflate(R.layout.project_borad__main_item, viewGroup, false);
 
                 viewHolder.titleView = view.findViewById(R.id.view_title);
                 viewHolder.userNameView = view.findViewById(R.id.view_user_nickname);

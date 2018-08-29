@@ -12,6 +12,8 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.it.survivecoding.API.GeoIpActivity;
+import com.example.it.survivecoding.API.WeatherApiActivity;
 import com.example.it.survivecoding.Activity.ColorFragmentActivity;
 import com.example.it.survivecoding.Activity.FragmentExam1Activity;
 import com.example.it.survivecoding.Activity.ImageFragmentActivity;
@@ -24,6 +26,7 @@ import com.example.it.survivecoding.coffeeApp.MainActivity;
 import com.example.it.survivecoding.lifecycle.LifeCycleActivity;
 import com.example.it.survivecoding.managers.BankActivity;
 import com.example.it.survivecoding.project.MainBoardActivity;
+import com.example.it.survivecoding.project.ReadBoardActivity;
 import com.example.it.survivecoding.selectApp.ListViewItem;
 import com.example.it.survivecoding.viewPager.ViewPagerExamActivity;
 
@@ -62,6 +65,9 @@ public class ListViewActivity extends AppCompatActivity implements AdapterView.O
         addItem("ViewPager", "ViewPager", ViewPagerActivity.class);
         addItem("ViewPager 연습", "TabLayout +ViewPage", ViewPagerExamActivity.class);
         addItem("개인 Project", "", MainBoardActivity.class);
+        addItem("개인 Project", "", ReadBoardActivity.class);
+        addItem("FreeGeoIp", "API 사용 연습", GeoIpActivity.class);
+        addItem("날씨앱 API버전", "API 사용 연습", WeatherApiActivity.class);
 
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

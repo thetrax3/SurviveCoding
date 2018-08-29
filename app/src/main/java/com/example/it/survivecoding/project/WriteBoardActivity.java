@@ -53,7 +53,7 @@ public class WriteBoardActivity extends AppCompatActivity implements View.OnClic
                 break;
             case R.id.cancel_btn:
                 //이전 페이지로 넘어가도록 설정
-
+                //*********************
                 break;
         }
     }

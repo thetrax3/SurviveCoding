@@ -48,7 +48,10 @@
         <activity
             android:name=".project.LoginActivity"
             android:label="@string/title_activity_login" />
-        <activity android:name=".project.MainBoardActivity"></activity>
+        <activity android:name=".project.MainBoardActivity" />
+        <activity android:name=".project.ReadBoardActivity" />
+        <activity android:name=".API.WeatherApiActivity" />
+        <activity android:name=".API.GeoIpActivity"></activity>
     </application>
 
 </manifest>

@@ -2,15 +2,15 @@ package com.example.it.survivecoding.models;
 
 public class Weather {
     private int imageRes;
-    private String location;
+    private String weather;
+    private String country;
+    private String temperature;
 
-    public Weather(int imageRes, String location, String temperature) {
+    public Weather(int imageRes, String country, String temperature) {
         this.imageRes = imageRes;
-        this.location = location;
+        this.country = country;
         this.temperature = temperature;
     }
-
-    private String temperature;
 
     public int getImageRes() {
         return imageRes;
@@ -21,11 +21,11 @@ public class Weather {
     }
 
     public String getLocation() {
-        return location;
+        return country;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
+    public void setLocation(String country) {
+        this.country = country;
     }
 
     public String getTemperature() {
@@ -36,11 +36,20 @@ public class Weather {
         this.temperature = temperature;
     }
 
+    public String getWeather() {
+        return weather;
+    }
+
+    public void setWeather(String weather) {
+        this.weather = weather;
+    }
+
     @Override
     public String toString() {
         return "Weather{" +
                 "imageRes=" + imageRes +
-                ", location='" + location + '\'' +
+                ", weather='" + weather + '\'' +
+                ", country='" + country + '\'' +
                 ", temperature='" + temperature + '\'' +
                 '}';
     }
