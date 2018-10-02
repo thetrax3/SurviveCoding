@@ -1,8 +1,8 @@
 package com.example.it.survivecoding.MemoApp;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -14,13 +14,14 @@ public class EditMemoActivity extends AppCompatActivity {
 
     private EditText mTitleEditText;
     private EditText mContentEditText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_memo);
 
-        mTitleEditText= (EditText) findViewById(R.id.title_edit);
-        mContentEditText = (EditText) findViewById(R.id.content_edit);
+        mTitleEditText = findViewById(R.id.title_edit);
+        mContentEditText = findViewById(R.id.content_edit);
     }
 
     @Override
