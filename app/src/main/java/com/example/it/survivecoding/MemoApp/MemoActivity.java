@@ -1,9 +1,7 @@
 package com.example.it.survivecoding.MemoApp;
 
-import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
@@ -20,11 +18,10 @@ import android.widget.Toast;
 
 import com.example.it.survivecoding.R;
 import com.example.it.survivecoding.adapters.MemoAdapter;
-import com.example.it.survivecoding.db.MemoContract;
 import com.example.it.survivecoding.db.MemoDbHelper;
+import com.example.it.survivecoding.db.MemoFacade;
 import com.example.it.survivecoding.models.Memo;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class MemoActivity extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemClickListener {
@@ -36,6 +33,7 @@ public class MemoActivity extends AppCompatActivity implements View.OnClickListe
     private ListView mMemoListView;
 
     private MemoDbHelper mDbHelper;
+    private MemoFacade mMemoFacade;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -45,13 +43,15 @@ public class MemoActivity extends AppCompatActivity implements View.OnClickListe
         //DB헬퍼
         mDbHelper = new MemoDbHelper(this);
 
+        //메모 퍼사드
+        mMemoFacade = new MemoFacade(this);
         mMemoListView = findViewById(R.id.memo_list);
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(this);
 
         //데이터
-        mMemoList = new ArrayList<>();
+        mMemoList = mMemoFacade.getMemoList();
 
         //어댑터
         mAdapter = new MemoAdapter(mMemoList);
@@ -59,6 +59,7 @@ public class MemoActivity extends AppCompatActivity implements View.OnClickListe
         //어댑터 연결
         mMemoListView.setAdapter(mAdapter);
 
+        //이벤트
         mMemoListView.setOnItemClickListener(this);
 
         //ContextMenu
@@ -83,22 +84,20 @@ public class MemoActivity extends AppCompatActivity implements View.OnClickListe
 
             if (requestCode == REQUEST_CODE_NEW_MEMO) {
                 // 새 메모
-                mMemoList.add(new Memo(title, content));
+                //DB사용 안할때는 list에 add해주지만 db를 사용하면 ㄴㄴ
+                //mMemoList.add(new Memo(title, content));
 
-                SQLiteDatabase db = mDbHelper.getWritableDatabase();
+                long newRowId = mMemoFacade.insert(title, content);
 
-                ContentValues values = new ContentValues();
-                values.put(MemoContract.MemoEntry.COLUMN_NAME_TITLE, title);
-                values.put(MemoContract.MemoEntry.COLUMN_NAME_CONTENTS, content);
-
-                long newRowId = db.insert(MemoContract.MemoEntry.TABLE_NAME, null, values);
                 if (newRowId == -1) {
                     //error
                     Toast.makeText(this, "save fail", Toast.LENGTH_SHORT).show();
                 } else {
                     //success
-                    Toast.makeText(this, "save", Toast.LENGTH_SHORT).show();
+                    //리스트 갱신
+                    mMemoList = mMemoFacade.getMemoList();
                 }
+
             } else if (requestCode == REQUEST_CODE_UPDATE_MEMO) {
                 long id = data.getLongExtra("id", -1);
 
@@ -107,7 +106,10 @@ public class MemoActivity extends AppCompatActivity implements View.OnClickListe
                 memo.setTitle(title);
                 memo.setContent(content);
             }
-            mAdapter.notifyDataSetChanged();
+            //mAdapter.notifyDataSetChanged();
+            // TODO 위 코드가 버그나서 안되니 일단 아래 코드로 땜빵
+            mAdapter = new MemoAdapter(mMemoList);
+            mMemoListView.setAdapter(mAdapter);
 
             Toast.makeText(this, "저장", Toast.LENGTH_SHORT).show();
         } else {
